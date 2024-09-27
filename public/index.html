@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Secret Chat</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            padding: 20px;
+            background-color: #f4f4f4;
+        }
+        button {
+            padding: 10px 20px;
+            font-size: 16px;
+            margin: 10px;
+            cursor: pointer;
+            border: none;
+            border-radius: 5px;
+            background-color: #007bff;
+            color: white;
+        }
+        button:hover {
+            background-color: #0056b3;
+        }
+        #secretCodeContainer {
+            margin-top: 20px;
+            display: none;
+        }
+        #chatContainer {
+            display: none; /* Initially hidden */
+            margin-top: 20px;
+        }
+        #chatBox {
+            height: 300px;
+            overflow-y: scroll;
+            border: 1px solid #ccc;
+            background-color: white;
+            border-radius: 5px;
+            margin-bottom: 10px;
+            padding: 10px; /* Add padding for better readability */
+            text-align: left; /* Align text to the left */
+        }
+        #chatForm {
+            display: flex;
+        }
+        #chatInput {
+            flex: 1;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px; /* Rounded corners */
+            margin-right: 10px; /* Space between input and button */
+        }
+        #userList {
+            margin-top: 10px;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            background-color: #e9ecef;
+            text-align: left; /* Align text to the left */
+        }
+        #notification {
+            margin-top: 20px;
+            color: #dc3545; /* Red color for alerts */
+        }
+    </style>
+</head>
+<body>
+    <h1>Welcome to Secret Chat!</h1>
+<div id="welcomeMessage" style="display: none; margin-top: 20px; font-size: 20px; color: #007bff;"></div>
+    <button id="createChatBtn">Create Chat Group</button>
+    <button id="joinChatBtn">Join Chat Group</button>
+
+    <div id="secretCodeContainer">
+        <p>Share this secret code with others:</p>
+        <p id="secretCode"></p>
+    </div>
+
+    <div id="chatContainer">
+        <h2>Chat Room</h2>
+        <div id="userList">
+            <h3>Users:</h3>
+        </div>
+        <div id="notification"></div>
+        <div id="chatBox"></div>
+        <form id="chatForm">
+            <input type="text" id="chatInput" placeholder="Type your message here..." />
+            <button type="submit">Send</button>
+        </form>
+    </div>
+
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
