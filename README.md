@@ -36,3 +36,13 @@ AnonChat is a lightweight anonymous chat application where users can join a chat
 5. Open the app in your browser:
 
     http://localhost:3001
+
+
+
+#Usage
+
+Creating a Chat Group: Click on the "Create Chat Group" button to generate a secret code and share it with others.
+
+Joining a Chat Group: Enter the secret code provided by the group creator to join an existing chat room.
+
+Send Messages: Type your message in the input field and press "Send" to communicate with others in real time.
