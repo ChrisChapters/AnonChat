@@ -39,7 +39,7 @@ AnonChat is a lightweight anonymous chat application where users can join a chat
 
 
 
-#Usage
+# Usage
 
 Creating a Chat Group: Click on the "Create Chat Group" button to generate a secret code and share it with others.
 
